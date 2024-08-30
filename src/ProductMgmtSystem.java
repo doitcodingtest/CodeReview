@@ -19,4 +19,7 @@ public class ProductMgmtSystem {
         products.add(product);
     }
 
+    public ArrayList<Product> getProducts() {
+        return products;
+    }
 }
