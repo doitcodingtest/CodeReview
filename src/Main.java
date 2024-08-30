@@ -1,5 +1,11 @@
+import java.util.ArrayList;
+
 public class Main {
+
+    static ProductMgmtSystem productMgmtSystem = new ProductMgmtSystem();
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        productMgmtSystem.addProduct(new Product("과자", 1000));
+        productMgmtSystem.addProduct(new Product("사탕", 500));
+        System.out.println(productMgmtSystem.totalPriceForProducts());
     }
 }
