@@ -8,17 +8,18 @@ class ProductMgmtSystemTest {
     static Product normalProduct;
 
     @BeforeAll
-    static void setUp(){
+    static void setUp() {
         productMgmtSystem = new ProductMgmtSystem();
         normalProduct = new Product("normal", 100);
     }
+
     @Test
-    void successAddProductWhenNormalProduct(){
+    void successAddProductWhenNormalProduct() {
         int start = productMgmtSystem.getProducts().size();
         productMgmtSystem.addProduct(normalProduct);
         productMgmtSystem.addProduct(normalProduct);
         productMgmtSystem.addProduct(normalProduct);
         int end = productMgmtSystem.getProducts().size();
-        assertEquals(start+3, end);
+        assertEquals(start + 3, end);
     }
 }
