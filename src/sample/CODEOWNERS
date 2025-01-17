@@ -1,0 +1,15 @@
+#모든 파일에 대하여 @test가 소유주가 된다.
+* @test
+
+#모든 java 파일에 대하여 @test, @test2가 소유주가 된다.
+*.java @test @test2
+
+# 소유주를 이메일로도 지정할 수 있다.
+*.java test@example.com
+
+# /build/logs/ 경로에 파일들은 @test가 소유주가 된다.
+/build/logs/ @test
+
+# /apps/경로는 @test가 소유주이지만  /apps/github경로는 제외한다.
+/apps/ @test
+/apps/github
